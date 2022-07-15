@@ -16,16 +16,16 @@ public class MyArrayList {
     public void addAt(int id,Object obj){
         if(id == size()) {
             add(obj);
-            return;
-        }
-        Object tmp = datas[id];
-        datas[id] = obj;
-        for(int i =id+1;i<=idx;i++){
-            Object t = datas[i];
-            datas[i] = tmp;
-            tmp = t;
-        }
-        add(tmp);
+        }else if(id >= 0 && id < size()){
+            Object tmp = datas[id];
+            datas[id] = obj;
+            for(int i =id+1;i<=idx;i++){
+                Object t = datas[i];
+                datas[i] = tmp;
+                tmp = t;
+            }
+            add(tmp);
+        }else throw new IndexOutOfBoundsException("범위 초과");
     }
     public Object get(int id){
         if(idx >= id) return datas[id];
