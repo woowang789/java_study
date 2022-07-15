@@ -11,6 +11,9 @@ public class MyArrayList {
         if(idx + 1 == datas.length) doubling();
         datas[++idx] = obj;
     }
+    public Object get(int id){
+        return datas[id];
+    }
 
     private void doubling(){
         Object[] tmp = new Object[(datas.length+1)*2];

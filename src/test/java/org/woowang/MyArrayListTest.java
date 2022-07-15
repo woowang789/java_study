@@ -22,15 +22,15 @@ class MyArrayListTest {
         MyArrayList al = new MyArrayList();
         al.add(100);
     }
-//
-//    @Test
-//    void get() {
-//        ArrayList al = new ArrayList();
-//        al.add(100);
-//        int rs = al.get(0);
-//
-//        assertEquals(100, rs);
-//    }
+
+    @Test
+    void get() {
+        MyArrayList al = new MyArrayList();
+        al.add(100);
+        int rs = (int) al.get(0);
+
+        assertEquals(100, rs);
+    }
 //
 //    @Test
 //    void add를_한번_할_때_마다_size가_증가() {
