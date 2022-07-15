@@ -31,37 +31,37 @@ class MyArrayListTest {
 
         assertEquals(100, rs);
     }
-//
-//    @Test
-//    void add를_한번_할_때_마다_size가_증가() {
-//        ArrayList al = new ArrayList();
-//        al.add(100);
-//        al.add(200);
-//        al.add(300);
-//
-//        assertEquals(3, al.size());
-//    }
-//
-//    @Test
-//    void get_1_equals_200() {
-//        ArrayList al = new ArrayList();
-//        al.add(100);
-//        al.add(200);
-//        al.add(300);
-//        int rs = al.get(1);
-//
-//        assertEquals(200, rs);
-//    }
-//
-//    @Test
-//    void removeAt() {
-//        ArrayList al = new ArrayList();
-//        al.add(100);
-//        al.add(200);
-//        al.add(300);
-//
-//        al.removeAt(1);
-//    }
+
+    @Test
+    void add를_한번_할_때_마다_size가_증가() {
+        MyArrayList al = new MyArrayList();
+        al.add(100);
+        al.add(200);
+        al.add(300);
+
+        assertEquals(3, al.size());
+    }
+
+    @Test
+    void get_1_equals_200() {
+        MyArrayList al = new MyArrayList();
+        al.add(100);
+        al.add(200);
+        al.add(300);
+        int rs = (int) al.get(1);
+
+        assertEquals(200, rs);
+    }
+
+    @Test
+    void removeAt() {
+        MyArrayList al = new MyArrayList();
+        al.add(100);
+        al.add(200);
+        al.add(300);
+
+        al.removeAt(1);
+    }
 //
 //    @Test
 //    void removeAt을_실행하면_size가_1_줄어든다() {
