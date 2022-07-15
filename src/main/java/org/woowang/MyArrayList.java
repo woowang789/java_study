@@ -1,7 +1,13 @@
 package org.woowang;
 
 public class MyArrayList {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    private Object[] datas = {};
+    private int idx = -1;
+
+    public int size(){
+        return idx+1;
     }
+
+
 }
+

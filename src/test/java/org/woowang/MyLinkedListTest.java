@@ -3,17 +3,19 @@ package org.woowang;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class MyLinkedListTest {
     @Test
     void ArrayList_클래스가_존재한다() {
         MyArrayList al = new MyArrayList();
     }
 
-//    @Test
-//    void size() {
-//        ArrayList al = new ArrayList();
-//        assertEquals(0, al.size());
-//    }
+    @Test
+    void size() {
+        MyArrayList al = new MyArrayList();
+        assertEquals(0, al.size());
+    }
 //
 //    @Test
 //    void add() {
