@@ -14,7 +14,10 @@ public class MyArrayList {
         datas[++idx] = obj;
     }
     public void addAt(int id,Object obj){
-        if(id == size()) add(obj);
+        if(id == size()) {
+            add(obj);
+            return;
+        }
         Object tmp = datas[id];
         datas[id] = obj;
         for(int i =id+1;i<=idx;i++){
