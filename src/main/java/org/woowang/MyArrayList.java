@@ -3,7 +3,7 @@ package org.woowang;
 import java.util.Arrays;
 
 public class MyArrayList {
-    private Object[] datas = {};
+    private Object[] datas = new Object[2];
     private int idx = -1;
 
     public int size(){
@@ -23,7 +23,9 @@ public class MyArrayList {
         for(int i=id;i<=idx;i++) datas[i] = datas[i+1];
         idx--;
         return removed;
-
+    }
+    public int getArrayLength(){
+        return datas.length;
     }
 
     private void doubling(){
