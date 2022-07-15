@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MyLinkedListTest {
+class MyArrayListTest {
     @Test
     void ArrayList_클래스가_존재한다() {
         MyArrayList al = new MyArrayList();
@@ -16,12 +16,12 @@ class MyLinkedListTest {
         MyArrayList al = new MyArrayList();
         assertEquals(0, al.size());
     }
-//
-//    @Test
-//    void add() {
-//        ArrayList al = new ArrayList();
-//        al.add(100);
-//    }
+
+    @Test
+    void add() {
+        MyArrayList al = new MyArrayList();
+        al.add(100);
+    }
 //
 //    @Test
 //    void get() {
