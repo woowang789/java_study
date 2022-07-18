@@ -43,9 +43,8 @@ public class MyArrayList {
     }
     public void showAllValues(){
         System.out.println("== 전체 데이터 출력 ==");
-        for(int i =0;i<size();i++){
+        for(int i =0;i<size();i++)
             System.out.println(i+" : "+datas[i].toString());
-        }
     }
 
     private void doubling(){
@@ -53,7 +52,5 @@ public class MyArrayList {
         for(int i =0;i<=idx;i++) tmp[i]  = datas[i];
         datas = tmp;
     }
-
-
 }
 
