@@ -34,36 +34,38 @@ public class MyHashMap<K,V> {
         valueArr[idx] = value;
     }
     public V get(K key){
-        for(int i =0;i<idx+1;i++){
-            if(keyArr[i].equals(key)){
-                return (V) valueArr[i];
-            }
-        }
-        throw new NullPointerException("key에 해당하는 value가 없음");
+        int id = indexOfKey(key);
+        if(id == -1) throw new NullPointerException("key에 해당하는 value가 없음");
+        return (V) valueArr[id];
     }
     public int size(){
         return idx+1;
     }
 
     public V remove(K key){
-        for(int i =0;i<idx+1;i++){
-            if(keyArr[i].equals(key)){
-                V ret = (V) valueArr[i];
-                moveLeft(i);
-                idx--;
-                return ret;
-            }
-        }
-        throw new NullPointerException("key에 해당하는 value가 없음");
+        int id = indexOfKey(key);
+        if(id == -1) throw new NullPointerException("key에 해당하는 value가 없음");
+        V ret = (V)valueArr[id];
+        moveLeft(id);
+        idx--;
+        return ret;
     }
+
+    public List<K> keySet() {
+        return Arrays.stream(keyArr).map(i->(K)i).collect(Collectors.toList());
+    }
+
     private void moveLeft(int id){
         for(int i=id;i<=idx;i++){
             keyArr[i] = keyArr[i+1];
             valueArr[i] = valueArr[i+1];
         }
     }
-
-    public List<K> keySet() {
-        return Arrays.stream(keyArr).map(i->(K)i).collect(Collectors.toList());
+    private int indexOfKey(K key){
+        int ret = -1;
+        for(int i =0;i<idx+1;i++){
+            if(keyArr[i].equals(key)) return i;
+        }
+        return ret;
     }
 }
